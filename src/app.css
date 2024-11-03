@@ -1,0 +1,92 @@
+.body {
+    background-color: #f7f7f7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+}
+
+.card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border-radius: 0.5rem; /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Shadow around the card */
+    background-color: rgb(27, 117, 129);
+    transform-style: preserve-3d;
+    transition: transform 150ms, height 150ms, width 150ms; /* Smooth transition for size */
+    cursor: pointer;
+    padding: 1rem; /* Padding for better spacing inside the card */
+    min-height: 150px; /* Minimum height for smaller content */
+    min-width: 250px;  /* Minimum width for smaller content */
+    max-width: 500px; /* Set a maximum width */
+    width: 80%; /* Responsive width to avoid filling the whole screen */
+    max-height: 400px; /* Limit the height */
+    margin: 20px; /* Space around the card */
+    transform: perspective(1000px) rotateY(var(--rotate-y, 0)); /* Keep 3D perspective */
+}
+
+.card.hover {
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+.card.flip {
+    transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+    position: absolute;
+    padding: 1rem;
+    backface-visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+.card-front {
+    left: 0;
+}
+
+.card-back {
+    transform: rotateY(180deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center; /* Centering content inside the card */
+}
+
+.flashcard-question {
+    font-size: 1.25rem; /* Font size for questions */
+    font-weight: bold;
+    margin-bottom: 0.5rem; /* Space between question and options */
+    text-align: center;
+    word-wrap: break-word; /* Ensure long words break */
+}
+
+.flashcard-options {
+    margin-top: 0.5rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.flashcard-option {
+    margin-top: 0.25rem;
+    font-size: 1rem; /* Adjusted font size for options */
+    padding: 0.5rem;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 0.25rem;
+    width: 80%;
+    text-align: center;
+    cursor: pointer;
+}
+
+.flashcard-option:first-child {
+    margin-top: 0;
+}
