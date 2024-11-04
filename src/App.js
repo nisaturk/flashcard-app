@@ -1,9 +1,8 @@
-import React, { useState } from 'react';
-import FlashcardList from './FlashcardList';
-import './app.css'
+import React from 'react';
+import './app.css';
 import FlashcardApp from './FlashcardApp'; 
 
-const SAMPLE_FLASHCARDS = [ // I had initialized this to test the flip function
+/*const SAMPLE_FLASHCARDS = [ // I had initialized this to test the flip function
   {
     id: 1,
     question: 'Where did we meet?',
@@ -16,7 +15,7 @@ const SAMPLE_FLASHCARDS = [ // I had initialized this to test the flip function
     answer: 'October 12',
     options: ['May 25', 'January 22', 'October 12', 'December 6']    
   }
-];
+];*/
 
 function App() {
   return (

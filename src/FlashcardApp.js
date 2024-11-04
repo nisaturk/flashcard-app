@@ -1,5 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import './stylesheets/Flashcard.css';
+import { CiEdit } from "react-icons/ci";
+import { MdDeleteOutline } from "react-icons/md";
+/*import { IoMdCheckmark } from "react-icons/io";*/
 
 const FlashcardApp = () => {
   const [flashcards, setFlashcards] = useState([]);
@@ -43,31 +47,40 @@ const FlashcardApp = () => {
   };
 
   return (
-    <div>
+    <div className='main-container'>
       <h1>Spanish-Turkish Flashcards</h1>
-      <input
-        type="text"
-        value={spanishWord}
-        onChange={(e) => setSpanishWord(e.target.value)}
-        placeholder="Enter Spanish word"
-      />
-      <input
-        type="text"
-        value={turkishWord}
-        onChange={(e) => setTurkishWord(e.target.value)}
-        placeholder="Enter Turkish word"
-      />
-      <button onClick={addFlashcard}>Add Flashcard</button>
-
-      <div className="flashcard-list">
-        {flashcards.map((card) => (
-          <div key={card.id} className="flashcard">
-            <p>{card.spanish} - {card.turkish}</p>
-            <button onClick={() => updateFlashcard(card.id, card.spanish, card.turkish)}>Edit</button>
-            <button onClick={() => deleteFlashcard(card.id)}>Delete</button>
-          </div>
-        ))}
+      
+      <div className='form'>
+        <input 
+          type="text"
+          value={spanishWord}
+          onChange={(e) => setSpanishWord(e.target.value)}
+          placeholder="Enter Spanish word"
+          className='form-blank'
+        />
+        <input cl
+          type="text"
+          value={turkishWord}
+          onChange={(e) => setTurkishWord(e.target.value)}
+          placeholder="Enter Turkish word"
+          className='form-blank'
+        />
+        <button onClick={addFlashcard} className='btn-add'>Add Flashcard</button>
       </div>
+
+      <div className='list-container'>
+        <div className="flashcard-list">
+          {flashcards.map((card) => (
+            <div key={card.id} className="flashcard">
+              <h2>{card.spanish} - {card.turkish}</h2>
+              <div className='flashcard-options'>
+                <div><CiEdit onClick={() => updateFlashcard(card.id, card.spanish, card.turkish)} className='btn-option btn-edit'></CiEdit></div>
+                <div><MdDeleteOutline onClick={() => deleteFlashcard(card.id)} className='btn-option btn-delete'></MdDeleteOutline></div>
+              </div>
+            </div>
+          ))}
+        </div>
+        </div>
     </div>
   );
 };

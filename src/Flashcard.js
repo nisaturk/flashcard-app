@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
+import './stylesheets/Flashcard.css';
 
 function Flashcard({ flashcard }) {
     const [flip, setFlip] = useState(false);
 
     return (
         <div 
-            className={`card ${flip ? 'flip' : ''}`} 
+            className={`hola card ${flip ? 'flip' : ''}`} 
             onClick={() => setFlip(!flip)}
         >
             <div className='card-front'>
