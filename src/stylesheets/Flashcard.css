@@ -1,0 +1,88 @@
+:root {
+    --card-color: #eeeea2;
+    --darker-card-color: #e3d976;
+    --vivid-card: #fef384;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 3rem;
+    justify-content: center;
+    align-items: center;
+    margin: 0 10rem;
+    padding: 3rem 0rem 10rem 0rem;
+}
+
+h1 {
+    font-size: 250%;
+    font-weight: 400;
+    margin: 0 0;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+}
+
+.form-blank, .btn-add{
+    width: 20rem;
+    height: 3rem;
+    font-size: 120%;
+    border-radius: 2%;
+}
+
+
+
+.flashcard {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 20rem;
+    height: 25rem;
+    background-color: var(--card-color);
+    border-radius: 1%;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+
+    h2 {
+        font-size: 140%;
+        font-weight: 700;
+        font-family: 'Lexend', sans-serif;
+    }
+}
+
+.flashcard:hover {
+    background-color: var(--vivid-card);
+}
+
+
+.list-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flashcard-list  {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 1rem;
+    row-gap: 1rem;
+}
+
+.flashcard-options {
+    display: flex;
+    flex-direction: row;
+    column-gap: 1rem;
+    font-size: 200%;
+}
+
+.btn-option {
+    padding: 0.7rem;
+}
+
+.btn-option:hover {
+    background-color: var(--darker-card-color);
+    border-radius: 50%;
+}
