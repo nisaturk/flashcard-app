@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import FlashcardList from './FlashcardList';
 import './app.css'
+import FlashcardApp from './FlashcardApp'; 
 
-const SAMPLE_FLASHCARDS = [
+const SAMPLE_FLASHCARDS = [ // I had initialized this to test the flip function
   {
     id: 1,
     question: 'Where did we meet?',
@@ -18,9 +19,10 @@ const SAMPLE_FLASHCARDS = [
 ];
 
 function App() {
-  const [flashcards, setFlashcards] = useState(SAMPLE_FLASHCARDS);
   return (
-    <FlashcardList flashcards={flashcards} />
+    <div className="App">
+      <FlashcardApp />  {/*Rendering the FlashcardApp component */}
+    </div>
   );
 }
 

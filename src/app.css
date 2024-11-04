@@ -3,7 +3,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh; /* Full viewport height */
+    height: 100vh;
 }
 
 .card {
@@ -11,20 +11,20 @@
     justify-content: center;
     align-items: center;
     position: relative;
-    border-radius: 0.5rem; /* Rounded corners */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Shadow around the card */
+    border-radius: 0.5rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     background-color: rgb(27, 117, 129);
     transform-style: preserve-3d;
-    transition: transform 150ms, height 150ms, width 150ms; /* Smooth transition for size */
+    transition: transform 150ms, height 150ms, width 150ms;
     cursor: pointer;
-    padding: 1rem; /* Padding for better spacing inside the card */
-    min-height: 150px; /* Minimum height for smaller content */
-    min-width: 250px;  /* Minimum width for smaller content */
-    max-width: 500px; /* Set a maximum width */
-    width: 80%; /* Responsive width to avoid filling the whole screen */
-    max-height: 400px; /* Limit the height */
-    margin: 20px; /* Space around the card */
-    transform: perspective(1000px) rotateY(var(--rotate-y, 0)); /* Keep 3D perspective */
+    padding: 1rem;
+    min-height: 150px;
+    min-width: 250px;
+    max-width: 500px;
+    width: 80%;
+    max-height: 400px;
+    margin: 20px;
+    transform: perspective(1000px) rotateY(var(--rotate-y, 0));
 }
 
 .card.hover {
@@ -57,15 +57,15 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    text-align: center; /* Centering content inside the card */
+    text-align: center; 
 }
 
 .flashcard-question {
-    font-size: 1.25rem; /* Font size for questions */
+    font-size: 1.25rem;
     font-weight: bold;
-    margin-bottom: 0.5rem; /* Space between question and options */
+    margin-bottom: 0.5rem;
     text-align: center;
-    word-wrap: break-word; /* Ensure long words break */
+    word-wrap: break-word;
 }
 
 .flashcard-options {
@@ -78,7 +78,7 @@
 
 .flashcard-option {
     margin-top: 0.25rem;
-    font-size: 1rem; /* Adjusted font size for options */
+    font-size: 1rem;
     padding: 0.5rem;
     background-color: rgba(255, 255, 255, 0.9);
     border-radius: 0.25rem;
